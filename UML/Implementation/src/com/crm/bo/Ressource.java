@@ -1,7 +1,7 @@
 package com.crm.bo;
 
 import java.util.ArrayList;
-import java.util.Date;
+import java.util.Calendar;
 
 public abstract class Ressource {
 
@@ -36,7 +36,7 @@ public abstract class Ressource {
 	}
 	
 
-	public void addCopy(String _barcode, Date _returnDate) {
+	public void addCopy(String _barcode, Calendar _returnDate) {
 		copies.add(new Copy(_barcode, _returnDate));
 		
 	}

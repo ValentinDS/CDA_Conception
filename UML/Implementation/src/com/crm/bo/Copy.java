@@ -1,11 +1,11 @@
 package com.crm.bo;
 
-import java.util.Date;
+import java.util.Calendar;
 
 public class Copy {
 
 	private String barcode;
-	private Date returnDate;
+	private Calendar returnDate;
 	
 	private Ressource ressource;
 	
@@ -16,18 +16,18 @@ public class Copy {
 		
 	}
 	
-	public Copy(String _barcode, Date _returnDate) {
+	public Copy(String _barcode, Calendar _returnDate) {
 		barcode = _barcode;
 		returnDate = _returnDate;	
 		
 	}
 	
-	public String getCopy() {
+	public String getBarCode() {
 		return barcode;
 		
 	}
 	
-	public Date getDate() {
+	public Calendar getDate() {
 		return returnDate;
 	}
 	

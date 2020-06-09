@@ -20,6 +20,8 @@ public class Location {
 		nbShelf = _nbShelf;
 		level = _level;
 		
+		stockedRessources = new ArrayList<Ressource>();
+		
 	}
 	
 	public Location(int _nbSpan, int _nbShelf, int _level, ArrayList<Ressource> _stockedRessources) {
@@ -56,6 +58,15 @@ public class Location {
 	
 	public int getLevel() {
 		return level;
+	}
+	
+	public void addStockedRessource(ArrayList<Ressource> _stockedRessources) {
+		
+		for(Ressource ressource: stockedRessources) {
+			stockedRessources.add(ressource);
+			
+		}
+		
 	}
 	
 	public void setStockedRessources(ArrayList<Ressource> _stockedRessources) {
