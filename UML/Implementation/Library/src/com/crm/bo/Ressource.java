@@ -1,7 +1,9 @@
 package com.crm.bo;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 
 public abstract class Ressource {
 
@@ -10,7 +12,7 @@ public abstract class Ressource {
 	
 	private Location location;
 	
-	private ArrayList<Copy> copies;
+	private List<Copy> copies;
 	
 	public Ressource() {
 		super();
@@ -35,9 +37,12 @@ public abstract class Ressource {
 		
 	}
 	
-
-	public void addCopy(String _barcode, Calendar _returnDate) {
-		copies.add(new Copy(_barcode, _returnDate));
+	public void addCopy(String _copybarcode, Calendar _returndate) {
+		copies.add(new Copy(_copybarcode, _returndate));
+	}
+	
+	public void addCopy(Copy _copy) {
+		copies.add(new Copy(_copy.getBarCode(), _copy.getDate()));
 		
 	}
 	
@@ -45,7 +50,7 @@ public abstract class Ressource {
 		return guarantee;
 	}
 	
-	public ArrayList<Copy> getCopies(){
+	public List<Copy> getCopies(){
 		return copies;
 	}
 	
@@ -68,6 +73,21 @@ public abstract class Ressource {
 	 */
 	public void setLocalisation(Location _location) {
 		location = _location;
+	}
+	
+	public String ToString() {
+		StringBuilder builder = new StringBuilder();
+		
+		SimpleDateFormat formatDate = new SimpleDateFormat("dd/MM/yyyy");
+		
+		builder.append(this.title + "\n");
+			
+		for(Copy copy: copies ) {
+		builder.append(copy.hashCode() + " - " + formatDate.format(copy.getDate().getTime()) + "\n");
+		
+		}
+		
+		return builder.toString();
 	}
 	
 }

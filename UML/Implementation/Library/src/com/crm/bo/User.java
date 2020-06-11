@@ -1,6 +1,7 @@
 package com.crm.bo;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class User {
 	
@@ -8,7 +9,7 @@ public class User {
 	private String firstname;
 	private float guaranteeAmount;
 	
-	private ArrayList<Copy> borrowedCopies;
+	private List<Copy> borrowedCopies;
 	
 	public User() {
 		super();
@@ -38,12 +39,12 @@ public class User {
 		guaranteeAmount = _guarantee;
 	}
 	
-	public void setBorrowedCopies(ArrayList<Copy> _borrowedCopies) {
+	public void setBorrowedCopies(List<Copy> _borrowedCopies) {
 		borrowedCopies = _borrowedCopies;
 		
 	}
 	
-	public ArrayList<Copy> getBorrowedCopies() {
+	public List<Copy> getBorrowedCopies() {
 		return borrowedCopies;
 		
 	}

@@ -21,11 +21,11 @@ public class Main {
 		ressources.add(cthulhu);
 		ressources.add(revuedelespace);
 		
-		cthulhu.addCopy("045414880804871078", new GregorianCalendar(2020,7,9));
-		cthulhu.addCopy("04548741818184148118", new GregorianCalendar(2020,9,17));
+		cthulhu.addCopy("4148148141822", new GregorianCalendar(2020,5,15));
+		cthulhu.addCopy("4148148141822", new GregorianCalendar(2019,11,12));
 		
+		revuedelespace.addCopy("4148148141822", new GregorianCalendar(2020,4,30));
 		revuedelespace.addCopy("4148148141822", new GregorianCalendar(2020,9,21));
-		revuedelespace.addCopy("51101988410", new GregorianCalendar(2020,9,20));
 		
 		ArrayList<Copy> borrowedCopiesDavid = new ArrayList<Copy>();
 		ArrayList<Copy> borrowedCopiesLouis = new ArrayList<Copy>();
@@ -46,10 +46,8 @@ public class Main {
 		
 		location.addStockedRessource(ressources);
 		
-		System.out.println(david.getBorrowedCopies().get(0).getBarCode());
-		System.out.println(louis.getBorrowedCopies().get(1).getBarCode());
-		
-		
+		System.out.println(cthulhu.ToString());
+		System.out.println(revuedelespace.ToString());
 		
 		
 		

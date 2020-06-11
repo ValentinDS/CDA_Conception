@@ -1,6 +1,7 @@
 package com.crm.bo;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Location {
 
@@ -8,7 +9,7 @@ public class Location {
 	private int nbShelf;
 	private int level;
 	
-	private ArrayList<Ressource> stockedRessources;
+	private List<Ressource> stockedRessources;
 	
 	public Location() {
 		super();
@@ -24,7 +25,7 @@ public class Location {
 		
 	}
 	
-	public Location(int _nbSpan, int _nbShelf, int _level, ArrayList<Ressource> _stockedRessources) {
+	public Location(int _nbSpan, int _nbShelf, int _level, List<Ressource> _stockedRessources) {
 		
 		nbSpan = _nbSpan;
 		nbShelf = _nbShelf;
@@ -60,7 +61,7 @@ public class Location {
 		return level;
 	}
 	
-	public void addStockedRessource(ArrayList<Ressource> _stockedRessources) {
+	public void addStockedRessource(List<Ressource> _stockedRessources) {
 		
 		for(Ressource ressource: stockedRessources) {
 			stockedRessources.add(ressource);
@@ -69,11 +70,7 @@ public class Location {
 		
 	}
 	
-	public void setStockedRessources(ArrayList<Ressource> _stockedRessources) {
-		stockedRessources = _stockedRessources;
-	}
-	
-	public ArrayList<Ressource> getStockedRessources(){
+	public List<Ressource> getStockedRessources(){
 		return stockedRessources;
 	}
 	
